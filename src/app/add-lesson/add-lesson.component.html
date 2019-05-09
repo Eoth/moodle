@@ -1,0 +1,26 @@
+
+<h3>Création de cours</h3>
+<div fxLayoutAlign="center" fxLayout="column">
+
+  <div mat-dialog-content fxLayout="column">
+
+    <mat-form-field>
+      <input matInput placeholder="Nom du cours" id="name" name="name" >
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="code du cours" id="code" name="code">
+      </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput placeholder="coefficient du cours" id="coeff" name="coeff">
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-actions>
+    <button mat-raised-button color="warn" mat-dialog-close>Annuler</button>
+    <button mat-raised-button color="primary"(click)="addLesson(name, code, coeff)">créer</button>
+  </div>
+  
+   
+</div>

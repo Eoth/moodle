@@ -1,0 +1,16 @@
+<h3>Nouvelle section</h3>
+<div fxLayoutAlign="center" fxLayout="column">
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Nom" id="name" name="section.name">
+  </mat-form-field>
+
+  <mat-checkbox color="primary">ajouter zone de dépôt</mat-checkbox>
+    
+  <div mat-dialog-actions>
+    <button mat-raised-button color="warn" (click)="onNoClick()">Annuler</button>
+    <button mat-raised-button color="primary" (click)="submitData()">ajouter</button>
+  </div>
+  
+   
+</div>

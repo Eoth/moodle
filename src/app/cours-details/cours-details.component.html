@@ -1,0 +1,23 @@
+<div *ngIf="cour">
+  <h2>{{cour.nom | uppercase}}</h2>  
+  <div *ngFor="let section of sections">
+      <mat-card >
+        <mat-card-header>
+          <div mat-card-avatar></div>
+           <mat-card-title>{{section.name}}</mat-card-title>
+          </mat-card-header>
+          
+          <mat-card-content>
+            <input id="singleFile" type="file" [fileUploadInputFor]= "fileUploadQueue"/>
+            <br>
+            <mat-file-upload-queue #fileUploadQueue [fileAlias]="'file'"[httpUrl]="'http://localhost:8180/jax-rs-jersey-application-sample'">
+              <mat-file-upload [file]="file" [id]="i" *ngFor="let file of fileUploadQueue.files; let i = index"></mat-file-upload>
+            </mat-file-upload-queue>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-stroked-button color='primary'(click)="openDialog()">ajouter section</button>
+          </mat-card-actions>
+      </mat-card>
+       
+  </div> 
+</div>

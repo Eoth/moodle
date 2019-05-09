@@ -1,0 +1,15 @@
+ <h3>Inscription à cours</h3>
+<div fxLayoutAlign="center" fxLayout="column">
+
+  <div mat-dialog-content>
+    <mat-form-field>
+      <input matInput placeholder=" code" id="code" [(ngModel)]="leCour.code" name="code">
+    </mat-form-field>
+ </div>
+ 
+ <div mat-dialog-actions >
+    <button mat-raised-button color="warn" (click)="onNoClick()">Annuler</button>
+    <button mat-raised-button color="primary" cdkFocusInitial>ajouter</button>
+ </div>
+     
+</div>
